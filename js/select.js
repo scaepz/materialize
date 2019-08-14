@@ -291,6 +291,7 @@
       $(this.dropdownOptions).remove();
       $(this.wrapper).before(this.$el);
       $(this.wrapper).remove();
+      this.dropdown.destroy();
     }
 
     /**

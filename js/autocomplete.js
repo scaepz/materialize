@@ -170,6 +170,7 @@
      */
     _removeDropdown() {
       this.container.parentNode.removeChild(this.container);
+      this.dropdown.destroy();
     }
 
     /**
