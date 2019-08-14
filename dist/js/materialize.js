@@ -1,5 +1,5 @@
 /*!
- * Materialize v1.0.0 (http://materializecss.com)
+ * Materialize vundefined (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -6579,6 +6579,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_removeDropdown",
       value: function _removeDropdown() {
         this.container.parentNode.removeChild(this.container);
+        this.dropdown.destroy();
       }
 
       /**
@@ -11895,6 +11896,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         $(this.dropdownOptions).remove();
         $(this.wrapper).before(this.$el);
         $(this.wrapper).remove();
+        this.dropdown.destroy();
       }
 
       /**
