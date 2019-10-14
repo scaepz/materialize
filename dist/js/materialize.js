@@ -2295,6 +2295,8 @@ $jscomp.polyfill = function (e, r, p, m) {
       } else {
         _this9.$el.after(_this9.dropdownEl);
       }
+      // Needed (at least in this version) when navigating quickly between views
+      if (!_this9.dropdownEl) return _possibleConstructorReturn(_this9);
 
       _this9._makeDropdownFocusable();
       _this9._resetFilterQueryBound = _this9._resetFilterQuery.bind(_this9);
