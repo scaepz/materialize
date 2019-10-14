@@ -78,6 +78,8 @@
       } else {
         this.$el.after(this.dropdownEl);
       }
+      // Needed (at least in this version) when navigating quickly between views
+      if (!this.dropdownEl) return;
 
       this._makeDropdownFocusable();
       this._resetFilterQueryBound = this._resetFilterQuery.bind(this);
