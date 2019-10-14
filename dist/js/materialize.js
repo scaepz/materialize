@@ -2359,7 +2359,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_removeEventHandlers",
       value: function _removeEventHandlers() {
         this.el.removeEventListener('keydown', this._handleTriggerKeydownBound);
-        this.dropdownEl.removeEventListener('click', this._handleDropdownClickBound);
+        if (this.dropdownEl) this.dropdownEl.removeEventListener('click', this._handleDropdownClickBound);
 
         if (this.options.hover) {
           this.el.removeEventListener('mouseenter', this._handleMouseEnterBound);
